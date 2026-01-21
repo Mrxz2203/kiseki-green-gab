@@ -1,0 +1,184 @@
+.carta-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.carta-wrapper {
+  max-width: 42rem;
+  width: 100%;
+}
+
+/* Carta principal */
+.carta-box {
+  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.carta-titulo {
+  font-size: 1.875rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #f9a8d4;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.carta-texto {
+  color: #fce7f3;
+  line-height: 1.75;
+  white-space: pre-line;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.125rem;
+}
+
+/* Flecha de navegación */
+.flecha-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.flecha-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f9a8d4;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.flecha-button:hover {
+  color: #fbcfe8;
+}
+
+.flecha-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.flecha-icon {
+  width: 2rem;
+  height: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.flecha-button:hover .flecha-icon {
+  transform: scale(1.1);
+}
+
+/* Botones de control */
+.botones-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.boton {
+  flex: 1;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s;
+  transform: scale(1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+}
+
+.boton-musica {
+  background: linear-gradient(to right, #db2777, #9333ea);
+}
+
+.boton-musica:hover {
+  background: linear-gradient(to right, #be185d, #7e22ce);
+}
+
+.boton-carta {
+  background: linear-gradient(to right, #9333ea, #4f46e5);
+}
+
+.boton-carta:hover {
+  background: linear-gradient(to right, #7e22ce, #4338ca);
+}
+
+.boton-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Indicador de páginas */
+.indicador-paginas {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicador-punto {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(244, 114, 182, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicador-punto:hover {
+  background-color: rgba(244, 114, 182, 0.5);
+}
+
+.indicador-punto.activo {
+  width: 2rem;
+  background-color: #f472b6;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .carta-box {
+    padding: 1.5rem;
+  }
+
+  .carta-titulo {
+    font-size: 1.5rem;
+  }
+
+  .carta-texto {
+    font-size: 1rem;
+  }
+
+  .botones-container {
+    flex-direction: column;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
