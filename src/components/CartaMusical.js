@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Play, Pause, ExternalLink, ChevronDown } from 'lucide-react';
 import './CartaMusical.css';
+
 import Kiseki from '../assets/Kiseki.mp3';
+import Shipp from '../assets/Shipp.jpg';
 
 export default function CartaMusical() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -9,14 +11,14 @@ export default function CartaMusical() {
   const audioRef = useRef(null);
 
   const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
     }
+    setIsPlaying(!isPlaying);
   };
 
   const goToNextPage = () => {
@@ -32,7 +34,7 @@ export default function CartaMusical() {
 
   const cartas = {
     1: {
-      titulo: "Kiseki by Gab",
+      titulo: 'Kiseki by Gab',
       texto: `Te amaré! Aún más de lo que te amo hoy.
 Son sentimientos que no se detendrán.
 Ahora mismo! Estoy tan enamorado.
@@ -53,87 +55,89 @@ Solo déjame decirte
 que soy muy feliz.`
     },
     2: {
-      titulo: "Kiseki by Gab",
+      titulo: 'Kiseki by Gab',
       texto: `Tenerte siempre aquí a mi lado
-mientras sostienes, a mi indefenso corazón
-me hace amarte más.
+mientras me sostienes, deja a mi indefenso corazón
+amarte aun más.
 En mi día a día hay felicidad
-mientras caminamos una (travesía).
-Encontrarnos pudo ser una
-coincidencia pero en este mundo...
-es un milagro!
-Incluso en los días oscuros
+mientras caminamos una travesía.
+Encontrarnos pudo ser una coincidencia
+pero en este mundo…
+es un milagro!`
+    },
+    3: {
+      titulo: 'Kiseki by Gab',
+      texto: `
+      Incluso en los días oscuros
 solo luces vendrán.
 La soledad y el dolor se marcharán.
 Soy yo mismo
 si tú estás.
-Así que, quédate conmigo..
-esto es para ti.`
+Así que, quedate conmigo..
+esto es para ti.
+`
     },
-    3: {
-      titulo: "Kiseki by Gab",
+4:{
+  titulo: 'Kiseki by Gab',
       texto: `Aquellos días de camino a casa
 se volvieron momentos eternos,
 cuando abrí mi corazón
 y vi por primera vez tu verdad.
 Después de aceptarme
-en este amor donde nos llena.
+en este amor que nos llena.
 Aún estamos a mitad del 
 futuro que nos tocará compartir
-o uno donde no estaré.
-Supongamos
-que si perdemos de vista nuestro mañana...
-Vivimos mientras sonreímos
+o uno donde no estaré.`   },
+     5: {
+      titulo: 'Kiseki by Gab',
+      texto: `Supongamos que..
+si me pierdo
+serías aquella luz que me guia`
+    },
+6: {
+      titulo: 'Kiseki by Gab',
+      texto: `Vivimos mientras sonreimos
 así es nuestro amor.
 Reiría por siempre a tu lado.
 Gracias… y ah.
-Te amo tanto.
+Te amo, tanto.
 Solo déjame decirte
 que soy muy feliz.
 Aunque haya días difíciles
 juntos los superaremos.
-Compartamos nuestras risas y las penas.
-Soy yo mismo.
+Compartamos nuestras risas y nuestas penas.
+Soy yo mismo...
 Si tú estás.
-Así que, quédate conmigo..
-Solo eres tú.
+Así que, quedate conmigo..
+Solo prome...teme.
 Hasta mi último día.`
     },
-    4: {
-      titulo: "Kiseki by Gab",
+    7: {
+      titulo: 'Kiseki by Gab',
       texto: `¡Finalmente encontré mi razón de vivir!
-Es porque estás junto a mí 
+Es porque estás junto a mí
 que soy como soy.
-Pasen años, 
-o el tiempo que me toque vivir, 
+Pasen años,
+o el tiempo que me toque vivir,
 siempre te amaría.`
     }
   };
-
   const carta = cartas[currentPage];
-
   return (
-    <div className="carta-container">
+    <div
+      className="carta-container"
+      style={{ '--bg-image': `url(${Shipp})` }}
+    >
       <audio ref={audioRef} src={Kiseki} loop />
-      
-      <div className="carta-wrapper">
-        {/* Carta */}
-        <div className="carta-box">
-          <h1 className="carta-titulo">
-            {carta.titulo}
-          </h1>
-          
-          <div className="carta-texto">
-            {carta.texto}
-          </div>
 
-          {/* Flecha para siguiente página */}
-          {currentPage < 4 && (
+      <div className="carta-wrapper">
+        <div className="carta-box">
+          <h1 className="carta-titulo">{carta.titulo}</h1>
+          <div className="carta-texto">{carta.texto}</div>
+
+          {currentPage < 7 && (
             <div className="flecha-container">
-              <button
-                onClick={goToNextPage}
-                className="flecha-button"
-              >
+              <button onClick={goToNextPage} className="flecha-button">
                 <span className="flecha-text">Continuar leyendo</span>
                 <ChevronDown className="flecha-icon" />
               </button>
@@ -141,12 +145,8 @@ siempre te amaría.`
           )}
         </div>
 
-        {/* Botones de control */}
         <div className="botones-container">
-          <button
-            onClick={togglePlay}
-            className="boton boton-musica"
-          >
+          <button onClick={togglePlay} className="boton boton-musica">
             {isPlaying ? (
               <>
                 <Pause className="boton-icon" />
@@ -160,25 +160,20 @@ siempre te amaría.`
             )}
           </button>
 
-          <button
-            onClick={goToOtraCarta}
-            className="boton boton-carta"
-          >
+          <button onClick={goToOtraCarta} className="boton boton-carta">
             <ExternalLink className="boton-icon" />
             Ver Otra Carta
           </button>
         </div>
 
-        {/* Indicador de páginas */}
         <div className="indicador-paginas">
-          {[1, 2, 3, 4].map((page) => (
+          {[1, 2, 3, 4,5 ,6 , 7].map((page) => (
             <button
               key={page}
-              onClick={() => {
-                setCurrentPage(page);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className={`indicador-punto ${currentPage === page ? 'activo' : ''}`}
+              onClick={() => setCurrentPage(page)}
+              className={`indicador-punto ${
+                currentPage === page ? 'activo' : ''
+              }`}
             />
           ))}
         </div>

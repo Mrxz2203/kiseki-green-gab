@@ -1,10 +1,37 @@
 .carta-container {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  overflow: hidden;
+}
+
+/* Fondo con blur */
+.carta-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px) brightness(0.75);
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+/* Overlay romántico */
+.carta-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(236, 72, 153, 0.25),
+    rgba(15, 23, 42, 0.85)
+  );
+  z-index: -1;
 }
 
 .carta-wrapper {
@@ -12,14 +39,29 @@
   width: 100%;
 }
 
-/* Carta principal */
+/* Carta */
 .carta-box {
   background: linear-gradient(to bottom right, #1e293b, #0f172a);
-  border-radius: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(236, 72, 153, 0.2);
   padding: 2rem;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(168, 85, 247, 0.3);
+
+  animation: aparecer-suave 1.6s ease-out forwards;
+}
+
+@keyframes aparecer-suave {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .carta-titulo {
@@ -28,6 +70,16 @@
   color: #f9a8d4;
   text-align: center;
   margin-bottom: 1.5rem;
+  animation: latido 4s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(249, 168, 212, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(249, 168, 212, 0.9);
+  }
 }
 
 .carta-texto {
@@ -38,7 +90,7 @@
   font-size: 1.125rem;
 }
 
-/* Flecha de navegación */
+/* Flecha */
 .flecha-container {
   display: flex;
   justify-content: center;
@@ -69,23 +121,19 @@
 .flecha-icon {
   width: 2rem;
   height: 2rem;
-  animation: bounce 2s infinite;
+  animation: flotar 2.5s ease-in-out infinite;
 }
 
-@keyframes bounce {
+@keyframes flotar {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(8px);
   }
 }
 
-.flecha-button:hover .flecha-icon {
-  transform: scale(1.1);
-}
-
-/* Botones de control */
+/* Botones */
 .botones-container {
   display: flex;
   gap: 1rem;
@@ -101,8 +149,7 @@
   justify-content: center;
   gap: 0.75rem;
   transition: all 0.3s;
-  transform: scale(1);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   border: none;
   cursor: pointer;
   color: white;
@@ -133,7 +180,7 @@
   height: 1.25rem;
 }
 
-/* Indicador de páginas */
+/* Indicador */
 .indicador-paginas {
   display: flex;
   justify-content: center;
@@ -151,16 +198,12 @@
   transition: all 0.3s;
 }
 
-.indicador-punto:hover {
-  background-color: rgba(244, 114, 182, 0.5);
-}
-
 .indicador-punto.activo {
   width: 2rem;
   background-color: #f472b6;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 640px) {
   .carta-box {
     padding: 1.5rem;
@@ -176,9 +219,5 @@
 
   .botones-container {
     flex-direction: column;
-  }
-
-  .boton {
-    width: 100%;
   }
 }
