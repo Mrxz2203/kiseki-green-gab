@@ -108,8 +108,8 @@ juntos los superaremos.
 Compartamos nuestras risas y nuestas penas.
 Soy yo mismo...
 Si tú estás.
-Así que, quedate conmigo..
-Solo prome...teme.
+Solo quedate conmigo..
+Asi que, prometeme..
 Hasta mi último día.`
     },
     7: {
