@@ -92,7 +92,8 @@ o uno donde no estaré.`   },
       titulo: 'Kiseki by Gab',
       texto: `Supongamos que..
 si me pierdo
-serías aquella luz que me guia`
+en la oscuridad
+serias tu mi luz`
     },
 6: {
       titulo: 'Kiseki by Gab',
@@ -105,19 +106,19 @@ Solo déjame decirte
 que soy muy feliz.
 Aunque haya días difíciles
 juntos los superaremos.
-Compartamos nuestras risas y nuestas penas.
+Compartamos nuestras penas y nuestas rinas.
 Soy yo mismo...
 Si tú estás.
-Solo quedate conmigo..
-Asi que, prometeme..
+Solo te pido.
+Que te quedes..
 Hasta mi último día.`
     },
     7: {
       titulo: 'Kiseki by Gab',
-      texto: `¡Finalmente encontré mi razón de vivir!
+      texto: `¡Finalmente entendí mi razón de vivir!
 Es porque estás junto a mí
-que soy como soy.
-Pasen años,
+que aprendí a vivir.
+Pasen los años,
 o el tiempo que me toque vivir,
 siempre te amaría.`
     }
