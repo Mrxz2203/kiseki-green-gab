@@ -5,6 +5,22 @@ import './CartaMusical.css';
 import Kiseki from '../assets/Kiseki.mp3';
 import Shipp from '../assets/Shipp.jpg';
 
+// Definir los rangos de tiempo para cada página (en segundos)
+const tiemposPaginas = {
+  1: { inicio: 0, fin: 41 },
+  2: { inicio: 42, fin: 63 },
+  3: { inicio: 64, fin: 84 },
+  4: { inicio: 85, fin: 105 },
+  5: { inicio: 106, fin: 128 },
+  6: { inicio: 129, fin: 147 },
+  7: { inicio: 148, fin: 181 },
+  8: { inicio: 182, fin: 191 },
+  9: { inicio: 192, fin: 212 },
+  10: { inicio: 213, fin: 246 },
+  11: { inicio: 247, fin: 258 },
+  12: { inicio: 259, fin: 271 }
+};
+
 export default function CartaMusical() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,21 +30,6 @@ export default function CartaMusical() {
   const [mostrarModal, setMostrarModal] = useState(false);
   const audioRef = useRef(null);
 
-  // Definir los rangos de tiempo para cada página (en segundos)
-const tiemposPaginas = {
-  1: { inicio: 0, fin: 41 },
-  2: { inicio: 42, fin: 63 },
-  3: { inicio: 64, fin: 84 },
-  4: { inicio: 85, fin: 105 },
-  5: { inicio: 106, fin: 128 },
-  6: { inicio: 129, fin: 147 },
-  7: { inicio: 148, fin: 181 },
-  8: { inicio: 182, fin: 190 },
-  9: { inicio: 191, fin: 212 },
-  10: { inicio: 213, fin: 246 },
-  11: { inicio: 247, fin: 258 },
-  12: { inicio: 259, fin: 271 }
-};
   // Cargar duración cuando el audio esté listo
   useEffect(() => {
     const audio = audioRef.current;
@@ -59,13 +60,11 @@ const tiemposPaginas = {
     for (let pagina = 1; pagina <= 12; pagina++) {
       const { inicio, fin } = tiemposPaginas[pagina];
       if (currentTime >= inicio && currentTime <= fin) {
-        if (currentPage !== pagina) {
-          setCurrentPage(pagina);
-        }
+        setCurrentPage(pagina);
         break;
       }
     }
-  }, [currentTime, sincronizacionActiva, tiemposPaginas]);
+  }, [currentTime, sincronizacionActiva]);
 
   // Formatear segundos a mm:ss
   const formatTime = (seconds) => {
@@ -137,7 +136,7 @@ El conocerte
     3: {
       titulo: 'Kiseki by Gab',
       texto: `Vivimos mientras sonreímos
-asi es nuestro amor.
+así es nuestro amor.
 Reiría por siempre a tu lado.
 Gracias… y ah...
 Te amo, tanto.
@@ -164,7 +163,7 @@ es un milagro!`
       texto: `Incluso en los días oscuros
 solo luces vendrán.
 La soledad y el dolor se marcharán.
-Soy yo, mismo.
+Soy yo mismo
 si tú estás.
 Así que, quedate conmigo..
 esto es para ti.`
