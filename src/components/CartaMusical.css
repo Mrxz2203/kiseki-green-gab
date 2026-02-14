@@ -221,3 +221,172 @@
     flex-direction: column;
   }
 }
+/* Tiempo del audio */
+.tiempo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #f9a8d4;
+  font-size: 0.875rem;
+}
+
+.tiempo-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tiempo-texto {
+  font-family: monospace;
+  font-weight: 500;
+}
+/* Modal de sincronización */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: aparecer-modal 0.3s ease-out;
+}
+
+@keyframes aparecer-modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-contenido {
+  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 28rem;
+  width: 90%;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  animation: deslizar-modal 0.3s ease-out;
+}
+
+@keyframes deslizar-modal {
+  from {
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-titulo {
+  color: #f9a8d4;
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-texto {
+  color: #fce7f3;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-boton {
+  width: 100%;
+  background: linear-gradient(to right, #9333ea, #4f46e5);
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-boton:hover {
+  background: linear-gradient(to right, #7e22ce, #4338ca);
+  transform: scale(1.02);
+}
+
+/* Sincronización activa */
+.sincronizacion-activa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: #34d399;
+  font-size: 0.875rem;
+  animation: pulso 2s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.sincronizacion-icon {
+  width: 1rem;
+  height: 1rem;
+  animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Botón de sincronización */
+.sincronizacion-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.boton-sincronizacion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #059669, #10b981);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.boton-sincronizacion:hover {
+  background: linear-gradient(to right, #047857, #059669);
+  transform: scale(1.05);
+}
+
+.boton-sincronizacion.activo {
+  background: linear-gradient(to right, #dc2626, #ef4444);
+}
+
+.boton-sincronizacion.activo:hover {
+  background: linear-gradient(to right, #b91c1c, #dc2626);
+}
+
+/* Deshabilitar indicadores en modo sincronización */
+.indicador-punto:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
