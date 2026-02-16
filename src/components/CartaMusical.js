@@ -58,7 +58,7 @@ export default function CartaMusical() {
     if (!sincronizacionActiva) return;
 
     // Encontrar la página correspondiente al tiempo actual
-    for (let pagina = 1; pagina <= 12; pagina++) {
+    for (let pagina = 1; pagina <= 13; pagina++) {
       const { inicio, fin } = tiemposPaginas[pagina];
       if (currentTime >= inicio && currentTime <= fin) {
         setCurrentPage(pagina);
