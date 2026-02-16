@@ -117,7 +117,7 @@ export default function CartaMusical() {
 
   const cartas = {
     1: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Te amaré! Aún más de lo que te amo hoy.
 Son sentimientos que no se detendrán.
 ¡Ahora mismo! Estoy tan enamorado.
