@@ -124,7 +124,7 @@ Son sentimientos que no se detendrán.
 No sé como explicarte...`
     },
     2: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Los días que vivimos se unen
 como nuestros caminos.
 (¡Es un Milagro!)
@@ -134,7 +134,7 @@ El conocerte
 (Es un milagro!)`
     },
     3: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
 así es nuestro amor.
 Reiría por siempre a tu lado.
@@ -144,14 +144,14 @@ Solo déjame decirte
 que soy tan feliz.`
     },
     4: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Tenerte por siempre aquí a mi lado
 mientras solo me sostienes, 
 me deja tan indefenso 
 y tan enamorado.`
     },
     5: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `En mi día a día hay felicidad
 mientras caminamos una (¡travesía!).
 Encontrarnos pudo ser una coincidencia
@@ -159,7 +159,7 @@ pero en este mundo…
 es un milagro!`
     },
     6: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Incluso en los días oscuros
 solo luces vendrán.
 La soledad y el dolor se marcharán.
@@ -169,7 +169,7 @@ Así que, quedate conmigo..
 esto es para ti.`
     },
     7: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Aquellos días de camino a casa
 se volvieron momentos eternos,
 fue cuando abrí mi corazón
@@ -181,14 +181,14 @@ futuro que nos tocará recorrer
 o uno donde no estaré...`
     },
     8: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Supongamos que..
 si me perdiera...
 en la oscuridad...
 serias tu mi luz.`
     },
     9: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreimos
 así es nuestro amor.
 Reiría por siempre si estás tú.
@@ -198,24 +198,24 @@ Solo déjame decirte
 que soy tan feliz.`
     },
     10: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Aunque haya días difíciles
 juntos los superaremos.
 Compartamos nuestras penas y nuestras risas.
-Soy yo mismo...
+Soy yo, mismo...
 Si tú estás.
 Así que, solo te pido.
 Que te quedes...
 Hasta mi último día.`
     },
     11: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `¡Finalmente entendí mi razón de vivir!
 Es porque estás junto a mí
 que aprendí a vivir.`
     },
     12: {
-      titulo: 'Kiseki by Gab',
+      titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
 o el tiempo que me toque vivir,
 siempre te amaría.`
