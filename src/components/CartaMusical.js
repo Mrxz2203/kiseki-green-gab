@@ -7,18 +7,19 @@ import Shipp from '../assets/Shipp.jpg';
 
 // Definir los rangos de tiempo para cada página (en segundos)
 const tiemposPaginas = {
-  1: { inicio: 0, fin: 41 },
-  2: { inicio: 42, fin: 63 },
-  3: { inicio: 64, fin: 84 },
-  4: { inicio: 85, fin: 105 },
-  5: { inicio: 106, fin: 128 },
-  6: { inicio: 129, fin: 147 },
-  7: { inicio: 148, fin: 181 },
-  8: { inicio: 182, fin: 191 },
-  9: { inicio: 192, fin: 212 },
-  10: { inicio: 213, fin: 246 },
-  11: { inicio: 247, fin: 258 },
-  12: { inicio: 259, fin: 271 }
+  1: { inicio: 0, fin: 20 },
+  2: { inicio: 21, fin: 41 },
+  3: { inicio: 42, fin: 63 },
+  4: { inicio: 64, fin: 84 },
+  5: { inicio: 85, fin: 105 },
+  6: { inicio: 106, fin: 128 },
+  7: { inicio: 129, fin: 147 },
+  8: { inicio: 148, fin: 181 },
+  9: { inicio: 182, fin: 191 },
+  10: { inicio: 192, fin: 212 },
+  11: { inicio: 213, fin: 246 },
+  12: { inicio: 247, fin: 258 },
+  13: { inicio: 259, fin: 271 },
 };
 
 export default function CartaMusical() {
@@ -86,7 +87,7 @@ export default function CartaMusical() {
   };
 
   const goToNextPage = () => {
-    if (currentPage < 12) {
+    if (currentPage < 13) {
       setCurrentPage(currentPage + 1);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -116,14 +117,18 @@ export default function CartaMusical() {
   };
 
   const cartas = {
-    1: {
-      titulo: 'Kiseki - Milagro',
-      texto: `Te amaré! Aún más de lo que te amo hoy.
+1: {
+     titulo: 'Kiseki - Milagro',
+      texto: `Adaptacion de la cancion Kiseki de Green - Especial San Valentin.`
+    }, 
+    2: {
+     titulo: 'Kiseki - Milagro',
+      texto: `¡Te amaré! Aún más de lo que te amo hoy.
 Son sentimientos que no se detendrán.
 ¡Ahora mismo! Estoy tan enamorado.
 No sé como explicarte...`
-    },
-    2: {
+    }, 
+    3: {
       titulo: 'Kiseki - Milagro',
       texto: `Los días que vivimos se unen
 como nuestros caminos.
@@ -133,7 +138,7 @@ como nuestros caminos.
 El conocerte
 (Es un milagro!)`
     },
-    3: {
+    4: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
 así es nuestro amor.
@@ -143,14 +148,14 @@ Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
     },
-    4: {
+    5: {
       titulo: 'Kiseki - Milagro',
       texto: `Tenerte por siempre aquí a mi lado
 mientras solo me sostienes, 
 me deja tan indefenso 
 y tan enamorado.`
     },
-    5: {
+    6: {
       titulo: 'Kiseki - Milagro',
       texto: `En mi día a día hay felicidad
 mientras caminamos una (¡travesía!).
@@ -158,17 +163,17 @@ Encontrarnos pudo ser una coincidencia
 pero en este mundo…
 es un milagro!`
     },
-    6: {
+    7: {
       titulo: 'Kiseki - Milagro',
       texto: `Incluso en los días oscuros
 solo luces vendrán.
 La soledad y el dolor se marcharán.
-Soy yo mismo
+Soy yo, mismo
 si tú estás.
 Así que, quedate conmigo..
 esto es para ti.`
     },
-    7: {
+    8: {
       titulo: 'Kiseki - Milagro',
       texto: `Aquellos días de camino a casa
 se volvieron momentos eternos,
@@ -180,14 +185,14 @@ Aún estamos a mitad del
 futuro que nos tocará recorrer
 o uno donde no estaré...`
     },
-    8: {
+    9: {
       titulo: 'Kiseki - Milagro',
       texto: `Supongamos que..
 si me perdiera...
 en la oscuridad...
 serias tu mi luz.`
     },
-    9: {
+    10: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreimos
 así es nuestro amor.
@@ -197,7 +202,7 @@ Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
     },
-    10: {
+    11: {
       titulo: 'Kiseki - Milagro',
       texto: `Aunque haya días difíciles
 juntos los superaremos.
@@ -208,13 +213,13 @@ Así que, solo te pido.
 Que te quedes...
 Hasta mi último día.`
     },
-    11: {
+    12: {
       titulo: 'Kiseki - Milagro',
-      texto: `¡Finalmente entendí mi razón de vivir!
+      texto: `¡Finalmente entendí mi razón de existir!
 Es porque estás junto a mí
 que aprendí a vivir.`
     },
-    12: {
+    13: {
       titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
 o el tiempo que me toque vivir,
@@ -252,7 +257,7 @@ siempre te amaría.`
           <h1 className="carta-titulo">{carta.titulo}</h1>
           <div className="carta-texto">{carta.texto}</div>
 
-          {currentPage < 12 && !sincronizacionActiva && (
+          {currentPage < 13 && !sincronizacionActiva && (
             <div className="flecha-container">
               <button onClick={goToNextPage} className="flecha-button">
                 <span className="flecha-text">Continuar leyendo</span>
@@ -314,7 +319,7 @@ siempre te amaría.`
         </div>
 
         <div className="indicador-paginas">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((page) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((page) => (
             <button
               key={page}
               onClick={() => !sincronizacionActiva && setCurrentPage(page)}
