@@ -14,12 +14,13 @@ const tiemposPaginas = {
   5: { inicio: 85, fin: 105 },
   6: { inicio: 106, fin: 128 },
   7: { inicio: 129, fin: 147 },
-  8: { inicio: 148, fin: 181 },
-  9: { inicio: 182, fin: 191 },
-  10: { inicio: 192, fin: 212 },
-  11: { inicio: 213, fin: 246 },
-  12: { inicio: 247, fin: 258 },
-  13: { inicio: 259, fin: 271 },
+  8: { inicio: 148, fin: 157 },
+  9: { inicio: 158, fin: 181 },
+  10: { inicio: 182, fin: 190 },
+  11: { inicio: 191, fin: 212 },
+  12: { inicio: 213, fin: 246 },
+  13: { inicio: 247, fin: 258 },
+  14: { inicio: 259, fin: 271 },
 };
 
 export default function CartaMusical() {
@@ -58,7 +59,7 @@ export default function CartaMusical() {
     if (!sincronizacionActiva) return;
 
     // Encontrar la página correspondiente al tiempo actual
-    for (let pagina = 1; pagina <= 13; pagina++) {
+    for (let pagina = 1; pagina <= 14; pagina++) {
       const { inicio, fin } = tiemposPaginas[pagina];
       if (currentTime >= inicio && currentTime <= fin) {
         setCurrentPage(pagina);
@@ -87,7 +88,7 @@ export default function CartaMusical() {
   };
 
   const goToNextPage = () => {
-    if (currentPage < 13) {
+    if (currentPage < 14) {
       setCurrentPage(currentPage + 1);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -132,7 +133,7 @@ No sé como explicarte...`
       titulo: 'Kiseki - Milagro',
       texto: `Los días que vivimos se unen
 como nuestros caminos.
-(¡Es un Milagro!)
+(¡Es un milagro!)
 ¿Y si conocernos fue solo suerte?
 ¿o el destino?
 El conocerte
@@ -141,7 +142,7 @@ El conocerte
     4: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
-así es nuestro amor.
+así es nuestro milagro.
 Reiría por siempre a tu lado.
 Gracias… y ah...
 Te amo, tanto.
@@ -158,9 +159,9 @@ y tan enamorado.`
     6: {
       titulo: 'Kiseki - Milagro',
       texto: `En mi día a día hay felicidad
-mientras caminamos una (¡travesía!).
+mientras vivimos una (¡travesía!).
 Encontrarnos pudo ser una coincidencia
-pero en este mundo…
+pero en este mundo,
 es un milagro!`
     },
     7: {
@@ -170,7 +171,7 @@ solo luces vendrán.
 La soledad y el dolor se marcharán.
 Soy yo, mismo
 si tú estás.
-Así que, quedate conmigo..
+Así que, solo escuchame,
 esto es para ti.`
     },
     8: {
@@ -178,48 +179,51 @@ esto es para ti.`
       texto: `Aquellos días de camino a casa
 se volvieron momentos eternos,
 fue cuando abrí mi corazón
-y vi por primera vez tu verdad.
-Después de aceptarme
-en este amor que nos llena.
+y te conocí realmente.`
+    },
+    9: {
+      titulo: 'Kiseki - Milagro',
+      texto: `Después de aceptarme
+en este milagro que nos llena.
 Aún estamos a mitad del 
 futuro que nos tocará recorrer
 o uno donde no estaré...`
     },
-    9: {
-      titulo: 'Kiseki - Milagro',
-      texto: `Supongamos que..
-si me perdiera...
-en la oscuridad...
-serias tu mi luz.`
-    },
     10: {
       titulo: 'Kiseki - Milagro',
+      texto: `Supongamos que...
+si me perdiera...
+en la oscuridad...
+serias mi luz.`
+    },
+    11: {
+      titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreimos
-así es nuestro amor.
+así es nuestro milagro.
 Reiría por siempre si estás tú.
 Gracias… y ah.
 Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
     },
-    11: {
+    12: {
       titulo: 'Kiseki - Milagro',
       texto: `Aunque haya días difíciles
 juntos los superaremos.
 Compartamos nuestras penas y nuestras risas.
-Soy yo, mismo...
+Soy yo, mismo.
 Si tú estás.
 Así que, solo te pido.
 Que te quedes...
 Hasta mi último día.`
     },
-    12: {
+    13: {
       titulo: 'Kiseki - Milagro',
       texto: `¡Finalmente entendí mi razón de existir!
 Es porque estás junto a mí
 que aprendí a vivir.`
     },
-    13: {
+    14: {
       titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
 o el tiempo que me toque vivir,
@@ -257,7 +261,7 @@ siempre te amaría.`
           <h1 className="carta-titulo">{carta.titulo}</h1>
           <div className="carta-texto">{carta.texto}</div>
 
-          {currentPage < 13 && !sincronizacionActiva && (
+          {currentPage < 14 && !sincronizacionActiva && (
             <div className="flecha-container">
               <button onClick={goToNextPage} className="flecha-button">
                 <span className="flecha-text">Continuar leyendo</span>
@@ -319,7 +323,7 @@ siempre te amaría.`
         </div>
 
         <div className="indicador-paginas">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((page) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((page) => (
             <button
               key={page}
               onClick={() => !sincronizacionActiva && setCurrentPage(page)}
