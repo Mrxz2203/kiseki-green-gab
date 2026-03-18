@@ -201,13 +201,13 @@ y te conocí realmente.`
       titulo: 'Kiseki - Milagro',
       texto: `Después de aceptarme
 en este amor que nos llena.
-Aún estamos a mitad del 
-futuro que nos tocará recorrer
+Seguimos caminando hacia el 
+futuro que nos tocará vivir
 o uno donde no estaré...`
     },
     13: {
       titulo: 'Kiseki - Milagro',
-      texto: ``
+      texto: `...`
     },
     14: {
       titulo: 'Kiseki - Milagro',
@@ -239,7 +239,7 @@ Compartamos nuestras penas y nuestras risas.`
       titulo: 'Kiseki - Milagro',
       texto: `Soy yo mismo.
 Sí, tú estás.
-Así que, solo te pido.
+Así que, solo te pido,
 que te quedes...
 Hasta mi último día.`
     },
