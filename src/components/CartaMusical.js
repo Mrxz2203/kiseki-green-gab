@@ -185,8 +185,8 @@ La soledad y el dolor se marcharán.`
     },
 10: {
       titulo: 'Kiseki - Milagro',
-      texto: `Soy yo, mismo.
-Si tú, estás.
+      texto: `Soy yo mismo.
+Sí, tú estás.
 Así que, solo escuchame,
 esto es para ti.`
     },
@@ -218,7 +218,7 @@ serias mi luz.`
     },
     15: {
       titulo: 'Kiseki - Milagro',
-      texto: `Vivimos mientras sonreimos
+      texto: `Vivimos mientras sonreímos
 así es nuestro milagro.
 Reiría por siempre si estás tú.`
     },
@@ -237,8 +237,8 @@ Compartamos nuestras penas y nuestras risas.`
     },
     18: {
       titulo: 'Kiseki - Milagro',
-      texto: `Soy yo, mismo.
-Si tú, estás.
+      texto: `Soy yo mismo.
+Sí, tú estás.
 Así que, solo te pido.
 que te quedes...
 Hasta mi último día.`
