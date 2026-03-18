@@ -9,18 +9,24 @@ import Shipp from '../assets/Shipp.jpg';
 const tiemposPaginas = {
   1: { inicio: 0, fin: 20 },
   2: { inicio: 21, fin: 41 },
-  3: { inicio: 42, fin: 63 },
-  4: { inicio: 64, fin: 84 },
-  5: { inicio: 85, fin: 105 },
-  6: { inicio: 106, fin: 128 },
-  7: { inicio: 129, fin: 147 },
-  8: { inicio: 148, fin: 157 },
-  9: { inicio: 158, fin: 181 },
-  10: { inicio: 182, fin: 190 },
-  11: { inicio: 191, fin: 212 },
-  12: { inicio: 213, fin: 246 },
-  13: { inicio: 247, fin: 258 },
-  14: { inicio: 259, fin: 271 },
+  3: { inicio: 42, fin: 51 },
+  4: { inicio: 52, fin: 63 },
+  5: { inicio: 64, fin: 72 },
+  6: { inicio: 73, fin: 84 },
+  7: { inicio: 85, fin: 105 },
+  8: { inicio: 106, fin: 128 },
+  9: { inicio: 129, fin: 137 },
+  10: { inicio: 138, fin: 147 },
+  11: { inicio: 148, fin: 157 },
+  12: { inicio: 158, fin: 172 },
+  13: { inicio: 173, fin: 181 },
+  14: { inicio: 182, fin: 190 },
+  15: { inicio: 191, fin: 200 },
+  16: { inicio: 201, fin: 212 },
+  17: { inicio: 213, fin: 222 },
+  18: { inicio: 223, fin: 246 },
+  19: { inicio: 247, fin: 258 },
+  20: { inicio: 259, fin: 271 },
 };
 
 export default function CartaMusical() {
@@ -59,7 +65,7 @@ export default function CartaMusical() {
     if (!sincronizacionActiva) return;
 
     // Encontrar la página correspondiente al tiempo actual
-    for (let pagina = 1; pagina <= 14; pagina++) {
+    for (let pagina = 1; pagina <= 20; pagina++) {
       const { inicio, fin } = tiemposPaginas[pagina];
       if (currentTime >= inicio && currentTime <= fin) {
         setCurrentPage(pagina);
@@ -88,14 +94,14 @@ export default function CartaMusical() {
   };
 
   const goToNextPage = () => {
-    if (currentPage < 14) {
+    if (currentPage < 20) {
       setCurrentPage(currentPage + 1);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const goToOtraCarta = () => {
-    window.open('https://carta-amanecer.vercel.app/', '_blank');
+    window.open('https://www.youtube.com/watch?v=DwTinTO0o9I&list=RDDwTinTO0o9I&start_radio=1', '_blank');
   };
 
   const activarSincronizacion = () => {
@@ -133,55 +139,66 @@ No sé como explicarte...`
       titulo: 'Kiseki - Milagro',
       texto: `Los días que vivimos se unen
 como nuestros caminos.
-(¡Es un milagro!)
-¿Y si conocernos fue solo suerte?
-¿o el destino?
-El conocerte
-(Es un milagro!)`
+(¡Es un milagro!)`
     },
-    4: {
+     4: {
+      titulo: 'Kiseki - Milagro',
+      texto: `¿Y si conocernos fue solo suerte?
+¿o fue el destino?
+¡El conocerte
+es un milagro!`
+    },
+    5: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
 así es nuestro milagro.
 Reiría por siempre a tu lado.
+`
+    },
+    6: {
+      titulo: 'Kiseki - Milagro',
+      texto: `
 Gracias… y ah...
 Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
     },
-    5: {
+    7: {
       titulo: 'Kiseki - Milagro',
       texto: `Tenerte por siempre aquí a mi lado
 mientras solo me sostienes, 
 me deja tan indefenso 
 y tan enamorado.`
     },
-    6: {
+    8: {
       titulo: 'Kiseki - Milagro',
       texto: `En mi día a día hay felicidad
-mientras vivimos una (¡travesía!).
+mientras vivimos una (¡milagro!).
 Encontrarnos pudo ser una coincidencia
 pero en este mundo,
 es un milagro!`
     },
-    7: {
+    9: {
       titulo: 'Kiseki - Milagro',
       texto: `Incluso en los días oscuros
 solo luces vendrán.
-La soledad y el dolor se marcharán.
-Soy yo, mismo
+La soledad y el dolor se marcharán.`
+    },
+10: {
+      titulo: 'Kiseki - Milagro',
+      texto: `Soy yo, mismo
 si tú estás.
 Así que, solo escuchame,
 esto es para ti.`
     },
-    8: {
+    11: {
       titulo: 'Kiseki - Milagro',
       texto: `Aquellos días de camino a casa
 se volvieron momentos eternos,
 fue cuando abrí mi corazón
 y te conocí realmente.`
     },
-    9: {
+    12: {
       titulo: 'Kiseki - Milagro',
       texto: `Después de aceptarme
 en este milagro que nos llena.
@@ -189,41 +206,51 @@ Aún estamos a mitad del
 futuro que nos tocará recorrer
 o uno donde no estaré...`
     },
-    10: {
+    13: {
+      titulo: 'Kiseki - Milagro',
+      texto: ``
+    },
+    14: {
       titulo: 'Kiseki - Milagro',
       texto: `Supongamos que...
 si me perdiera...
 en la oscuridad...
 serias mi luz.`
     },
-    11: {
+    15: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreimos
 así es nuestro milagro.
-Reiría por siempre si estás tú.
-Gracias… y ah.
+Reiría por siempre si estás tú.`
+    },
+    16: {
+      titulo: 'Kiseki - Milagro',
+      texto: `Gracias… y ah.
 Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
     },
-    12: {
+    17: {
       titulo: 'Kiseki - Milagro',
       texto: `Aunque haya días difíciles
 juntos los superaremos.
-Compartamos nuestras penas y nuestras risas.
-Soy yo, mismo.
+Compartamos nuestras penas y nuestras risas.`
+    },
+    18: {
+      titulo: 'Kiseki - Milagro',
+      texto: `Soy yo, mismo.
 Si tú estás.
 Así que, solo te pido.
 Que te quedes...
 Hasta mi último día.`
     },
-    13: {
+    19: {
       titulo: 'Kiseki - Milagro',
       texto: `¡Finalmente entendí mi razón de existir!
 Es porque estás junto a mí
 que aprendí a vivir.`
     },
-    14: {
+    20: {
       titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
 o el tiempo que me toque vivir,
@@ -261,7 +288,7 @@ siempre te amaría.`
           <h1 className="carta-titulo">{carta.titulo}</h1>
           <div className="carta-texto">{carta.texto}</div>
 
-          {currentPage < 14 && !sincronizacionActiva && (
+          {currentPage < 20 && !sincronizacionActiva && (
             <div className="flecha-container">
               <button onClick={goToNextPage} className="flecha-button">
                 <span className="flecha-text">Continuar leyendo</span>
@@ -295,7 +322,7 @@ siempre te amaría.`
 
           <button onClick={goToOtraCarta} className="boton boton-carta">
             <ExternalLink className="boton-icon" />
-            Ver Otra Carta
+            Ver canción original
           </button>
         </div>
 
@@ -323,7 +350,7 @@ siempre te amaría.`
         </div>
 
         <div className="indicador-paginas">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((page) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map((page) => (
             <button
               key={page}
               onClick={() => !sincronizacionActiva && setCurrentPage(page)}

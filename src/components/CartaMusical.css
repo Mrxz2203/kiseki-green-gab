@@ -88,6 +88,7 @@
   white-space: pre-line;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.125rem;
+  text-align: center; /* 👈 Agrega esta línea */
 }
 
 /* Flecha */
