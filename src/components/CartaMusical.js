@@ -157,8 +157,7 @@ Reiría por siempre a tu lado.
     },
     6: {
       titulo: 'Kiseki - Milagro',
-      texto: `
-Gracias… y ah...
+      texto: `Gracias… y ahh...
 Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
@@ -173,7 +172,7 @@ y tan enamorado.`
     8: {
       titulo: 'Kiseki - Milagro',
       texto: `En mi día a día hay felicidad
-mientras vivimos una (¡milagro!).
+mientras vivimos una (¡travesía!).
 Encontrarnos pudo ser una coincidencia
 pero en este mundo,
 es un milagro!`
@@ -186,8 +185,8 @@ La soledad y el dolor se marcharán.`
     },
 10: {
       titulo: 'Kiseki - Milagro',
-      texto: `Soy yo, mismo
-si tú estás.
+      texto: `Soy yo, mismo.
+Si tú, estás.
 Así que, solo escuchame,
 esto es para ti.`
     },
@@ -201,7 +200,7 @@ y te conocí realmente.`
     12: {
       titulo: 'Kiseki - Milagro',
       texto: `Después de aceptarme
-en este milagro que nos llena.
+en este amor que nos llena.
 Aún estamos a mitad del 
 futuro que nos tocará recorrer
 o uno donde no estaré...`
@@ -225,7 +224,7 @@ Reiría por siempre si estás tú.`
     },
     16: {
       titulo: 'Kiseki - Milagro',
-      texto: `Gracias… y ah.
+      texto: `Gracias… y ahh...
 Te amo, tanto.
 Solo déjame decirte
 que soy tan feliz.`
@@ -239,9 +238,9 @@ Compartamos nuestras penas y nuestras risas.`
     18: {
       titulo: 'Kiseki - Milagro',
       texto: `Soy yo, mismo.
-Si tú estás.
+Si tú, estás.
 Así que, solo te pido.
-Que te quedes...
+que te quedes...
 Hasta mi último día.`
     },
     19: {
@@ -253,7 +252,7 @@ que aprendí a vivir.`
     20: {
       titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
-o el tiempo que me toque vivir,
+en el tiempo que me toque vivir,
 siempre te amaría.`
     }
   };
