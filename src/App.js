@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <CartaMusical />
     </div>
-  );
+  );  
 }
 
 export default App;

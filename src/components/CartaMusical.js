@@ -151,15 +151,15 @@ es un milagro!`
     5: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
-así es nuestro milagro.
-Reiría por siempre a tu lado.
+así es nuestra historia.
+Reiría por siempre si estás tú.
 `
     },
     6: {
       titulo: 'Kiseki - Milagro',
       texto: `Gracias… y ahh...
 Te amo, tanto.
-Solo déjame decirte
+Solo déjame decirte,
 que soy tan feliz.`
     },
     7: {
@@ -172,10 +172,10 @@ y tan enamorado.`
     8: {
       titulo: 'Kiseki - Milagro',
       texto: `En mi día a día hay felicidad
-mientras vivimos una (¡travesía!).
+mientras vivimos una ¡travesía!
 Encontrarnos pudo ser una coincidencia
 pero en este mundo,
-es un milagro!`
+se le llama un ¡milagro!`
     },
     9: {
       titulo: 'Kiseki - Milagro',
@@ -188,7 +188,7 @@ La soledad y el dolor se marcharán.`
       texto: `Soy yo mismo.
 Sí, tú estás.
 Así que, solo escuchame,
-esto es para ti.`
+esto es por ti.`
     },
     11: {
       titulo: 'Kiseki - Milagro',
@@ -219,14 +219,14 @@ serias mi luz.`
     15: {
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
-así es nuestro milagro.
+así es nuestra historia.
 Reiría por siempre si estás tú.`
     },
     16: {
       titulo: 'Kiseki - Milagro',
       texto: `Gracias… y ahh...
 Te amo, tanto.
-Solo déjame decirte
+Solo déjame decirte,
 que soy tan feliz.`
     },
     17: {
