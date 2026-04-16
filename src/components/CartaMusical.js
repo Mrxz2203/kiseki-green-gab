@@ -11,8 +11,8 @@ const tiemposPaginas = {
   2: { inicio: 21, fin: 41 },
   3: { inicio: 42, fin: 51 },
   4: { inicio: 52, fin: 63 },
-  5: { inicio: 64, fin: 72 },
-  6: { inicio: 73, fin: 84 },
+  5: { inicio: 64, fin: 73 },
+  6: { inicio: 74, fin: 84 },
   7: { inicio: 85, fin: 105 },
   8: { inicio: 106, fin: 128 },
   9: { inicio: 129, fin: 137 },
@@ -138,7 +138,7 @@ No sé como explicarte...`
     3: {
       titulo: 'Kiseki - Milagro',
       texto: `Los días que vivimos se unen
-como nuestros caminos.
+en nuestros caminos.
 (¡Es un milagro!)`
     },
      4: {
@@ -152,7 +152,7 @@ es un milagro!`
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
 así es nuestra historia.
-Reiría por siempre si estás tú.
+Reiría por siempre si estás aquí.
 `
     },
     6: {
@@ -166,13 +166,13 @@ que soy tan feliz.`
       titulo: 'Kiseki - Milagro',
       texto: `Tenerte por siempre aquí a mi lado
 mientras solo me sostienes, 
-me deja tan indefenso 
+me deja tan vulnerable
 y tan enamorado.`
     },
     8: {
       titulo: 'Kiseki - Milagro',
-      texto: `En mi día a día hay felicidad
-mientras vivimos una ¡travesía!
+      texto: `En nuestro día a día nacen alegrías,
+y juntos recorremos este milagro!
 Encontrarnos pudo ser una coincidencia
 pero en este mundo,
 se le llama un ¡milagro!`
@@ -203,7 +203,7 @@ y te conocí realmente.`
 en este amor que nos llena.
 Seguimos caminando hacia el 
 futuro que nos tocará vivir
-o uno donde no estaré...`
+es uno donde no estaré...`
     },
     13: {
       titulo: 'Kiseki - Milagro',
@@ -220,7 +220,7 @@ serias mi luz.`
       titulo: 'Kiseki - Milagro',
       texto: `Vivimos mientras sonreímos
 así es nuestra historia.
-Reiría por siempre si estás tú.`
+Reiría por siempre si estás aquí.`
     },
     16: {
       titulo: 'Kiseki - Milagro',
@@ -252,7 +252,7 @@ que aprendí a vivir.`
     20: {
       titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
-en el tiempo que me toque vivir,
+en el tiempo que me toque estar,
 siempre te amaría.`
     }
   };
