@@ -245,8 +245,7 @@ que te quedes...`
     },
     19: {
       titulo: 'Kiseki - Milagro',
-      texto: `
-Hasta mi último día...`
+      texto: `Hasta mi último día...` 
     },
     20: {
       titulo: 'Kiseki - Milagro',
