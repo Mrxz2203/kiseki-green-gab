@@ -24,9 +24,10 @@ const tiemposPaginas = {
   15: { inicio: 191, fin: 200 },
   16: { inicio: 201, fin: 212 },
   17: { inicio: 213, fin: 222 },
-  18: { inicio: 223, fin: 246 },
-  19: { inicio: 247, fin: 258 },
-  20: { inicio: 259, fin: 271 },
+  18: { inicio: 223, fin: 233 },
+  19: { inicio: 234, fin: 246 },
+  20: { inicio: 247, fin: 258 },
+  21: { inicio: 259, fin: 271 },
 };
 
 export default function CartaMusical() {
@@ -65,7 +66,7 @@ export default function CartaMusical() {
     if (!sincronizacionActiva) return;
 
     // Encontrar la página correspondiente al tiempo actual
-    for (let pagina = 1; pagina <= 20; pagina++) {
+    for (let pagina = 1; pagina <= 21; pagina++) {
       const { inicio, fin } = tiemposPaginas[pagina];
       if (currentTime >= inicio && currentTime <= fin) {
         setCurrentPage(pagina);
@@ -94,7 +95,7 @@ export default function CartaMusical() {
   };
 
   const goToNextPage = () => {
-    if (currentPage < 20) {
+    if (currentPage < 21) {
       setCurrentPage(currentPage + 1);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -240,16 +241,20 @@ Compartamos nuestras penas y nuestras risas.`
       texto: `Soy yo mismo.
 Sí, tú estás.
 Así que, solo te pido,
-que te quedes...
-Hasta mi último día.`
+que te quedes...`
     },
     19: {
+      titulo: 'Kiseki - Milagro',
+      texto: `
+Hasta mi último día...`
+    },
+    20: {
       titulo: 'Kiseki - Milagro',
       texto: `¡Finalmente entendí mi razón de existir!
 Es porque estás junto a mí
 que aprendí a vivir.`
     },
-    20: {
+    21: {
       titulo: 'Kiseki - Milagro',
       texto: `Pasen los años,
 en el tiempo que me toque estar,
@@ -271,7 +276,7 @@ siempre te amaría.`
         <div className="modal-overlay">
           <div className="modal-contenido">
             <h2 className="modal-titulo">Sincronización con la música</h2>
-            <p className="modal-texto">
+            <p className="modal-teto">
               Ahora la letra se adaptará al ritmo de la canción automáticamente.
               Las páginas cambiarán según el tiempo de la música.
             </p>
@@ -287,7 +292,7 @@ siempre te amaría.`
           <h1 className="carta-titulo">{carta.titulo}</h1>
           <div className="carta-texto">{carta.texto}</div>
 
-          {currentPage < 20 && !sincronizacionActiva && (
+          {currentPage < 21 && !sincronizacionActiva && (
             <div className="flecha-container">
               <button onClick={goToNextPage} className="flecha-button">
                 <span className="flecha-text">Continuar leyendo</span>
@@ -349,7 +354,7 @@ siempre te amaría.`
         </div>
 
         <div className="indicador-paginas">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map((page) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21].map((page) => (
             <button
               key={page}
               onClick={() => !sincronizacionActiva && setCurrentPage(page)}
