@@ -172,7 +172,7 @@ y tan enamorado.`
     8: {
       titulo: 'Kiseki - Milagro',
       texto: `En nuestro día a día nacen alegrías,
-y juntos recorremos este milagro!
+mientras recorremos este milagro!
 Encontrarnos pudo ser una coincidencia
 pero en este mundo,
 se le llama un ¡milagro!`
