@@ -276,10 +276,10 @@ siempre te amaría.`
         <div className="modal-overlay">
           <div className="modal-contenido">
             <h2 className="modal-titulo">Sincronización con la música</h2>
-            <p className="modal-teto">
-              Ahora la letra se adaptará al ritmo de la canción automáticamente.
-              Las páginas cambiarán según el tiempo de la música.
-            </p>
+            <p className="modal-texto">
+  Ahora la letra se adaptará al ritmo de la canción automáticamente.
+  Las páginas cambiarán según el tiempo de la música.
+</p>
             <button onClick={confirmarSincronizacion} className="modal-boton">
               Ok
             </button>
