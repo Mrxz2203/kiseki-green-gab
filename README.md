@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 🎵 Carta Musical: Kiseki (Milagro)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web interactiva desarrollada con **React.js** para la lectura sincrónica de una adaptación poética de la canción *Kiseki* de GReeeeN. Permite al usuario explorar la letra estrofa por estrofa o activar un modo de sincronización automática en tiempo real con la pista de audio.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📋 Tabla de Contenidos
 
-### `npm start`
+- [🎵 Carta Musical: Kiseki (Milagro)](#-carta-musical-kiseki-milagro)
+  - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
+  - [📌 Descripción del Proyecto](#-descripción-del-proyecto)
+  - [✨ Características Principales](#-características-principales)
+  - [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
+  - [📁 Estructura del Proyecto](#-estructura-del-proyecto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Descripción del Proyecto
 
-### `npm test`
+**Carta Musical** combina la lectura de un poema/adaptación lírica con un reproductor de audio sincronizado. El usuario puede avanzar de forma manual página por página (hasta 21 estrofas) o habilitar el modo de sincronización para que el texto cambie automáticamente según los sellos de tiempo exactos del audio `Kiseki.mp3`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✨ Características Principales
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Navegación Dual**:
+  - **Modo Sincronizado**: Cambia las páginas de texto automáticamente monitoreando `currentTime` de la canción.
+  - **Modo Lectura Libre**: Avance manual mediante el botón *"Continuar leyendo"* o seleccionando los puntos de paginación.
+- **Modal de Confirmación**: Interfaz informativa previa para habilitar la reproducción automática sincronizada.
+- **Controles e Indicadores de Audio**:
+  - Botón interactivo para pausar/reproducir audio.
+  - Contador de tiempo transcurrido / total (`mm:ss`)[cite: 8].
+  - Indicador visual animado cuando el modo sincronización está activo[cite: 8].
+- **Llamado a Acción Externo**: Enlace directo para consultar la canción original externa en YouTube[cite: 8].
+- **Diseño Atmosférico**:
+  - Fondo de imagen con desenfoque suave (`blur: 10px`) y un gradiente radial estilo romántico[cite: 8].
+  - Animaciones CSS como `aparecer-suave`, `latido` en títulos y `flotar` en flechas de avance[cite: 8].
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tecnologías Utilizadas
 
-### `npm run eject`
+- **React.js**: Manejo de estado (`useState`), referencias DOM (`useRef`) y efectos de ciclo de vida (`useEffect`)[cite: 8].
+- **Lucide React**: Iconografía dinámica (`Play`, `Pause`, `ExternalLink`, `ChevronDown`, `Clock`, `Radio`)[cite: 8].
+- **CSS3 / Flexbox**: Animaciones personalizadas con `@keyframes`, propiedades dinámicas vía CSS variables y diseño adaptativo[cite: 8].
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Estructura del Proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+carta-musical/
+├── src/
+│   ├── assets/
+│   │   ├── Kiseki.mp3           # Archivo de audio principal
+│   │   └── Shipp.jpg            # Imagen de fondo para el contenedor
+│   ├── components/
+│   │   ├── CartaMusical.js      # Componente principal con la lógica e interacciones
+│   │   └── CartaMusical.css     # Estilos de la carta, animaciones y modales
+│   ├── App.js                   # Componente raíz de la aplicación
+│   ├── App.css                  # Estilos globales y reset CSS
+│   └── index.js                 # Punto de entrada de React
+└── package.json
