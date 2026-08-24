@@ -8,14 +8,21 @@
   overflow: hidden;
 }
 
-/* Fondo con blur */
+/* ================================
+   FONDO
+================================ */
+
 .carta-container::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: var(--bg-image);
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;   /* mueve el foco más arriba */
+/* o */
+background-position: center top;
+/* o */
+background-position: 50% 30%;      /* x% y% - juega con los valores */
   filter: blur(10px) brightness(0.75);
   transform: scale(1.1);
   z-index: -2;
@@ -34,63 +41,151 @@
   z-index: -1;
 }
 
+/* ================================
+   CONTENEDOR
+================================ */
+
 .carta-wrapper {
   max-width: 42rem;
   width: 100%;
 }
 
-/* Carta */
+/* ================================
+   CARTA
+================================ */
+
 .carta-box {
-  background: linear-gradient(to bottom right, #1e293b, #0f172a);
-  border-radius: 0.75rem;
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.6),
-    0 0 30px rgba(236, 72, 153, 0.2);
-  padding: 2rem;
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 27, 45, 0.97),
+      rgba(15, 23, 42, 0.98)
+    );
+
+  border-radius: 1rem;
+
+  padding: 2.5rem 2rem;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(168, 85, 247, 0.3);
+
+  /* Borde romántico */
+  border: 1px solid rgba(249, 168, 212, 0.25);
+
+  /* Profundidad + brillo */
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.65),
+    0 0 30px rgba(236, 72, 153, 0.15),
+    inset 0 0 30px rgba(236, 72, 153, 0.03);
+
+  overflow: hidden;
+
   animation: aparecer-suave 1.6s ease-out forwards;
 }
+
+/* Línea decorativa superior */
+.carta-box::before {
+   display: none;
+}
+
+/* Decoración inferior */
+.carta-box::after {
+  content: "♡";
+
+  position: absolute;
+
+  bottom: 12px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: rgba(249, 168, 212, 0.45);
+
+  font-size: 1.1rem;
+
+  text-shadow:
+    0 0 10px rgba(249, 168, 212, 0.4);
+}
+
+/* ================================
+   ANIMACIÓN DE ENTRADA
+================================ */
 
 @keyframes aparecer-suave {
   from {
     opacity: 0;
     transform: translateY(30px) scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
 
+/* ================================
+   TÍTULO
+================================ */
+
 .carta-titulo {
   font-size: 1.875rem;
+
   font-family: Georgia, 'Times New Roman', serif;
+
   color: #f9a8d4;
+
   text-align: center;
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1.8rem;
+
+  letter-spacing: 0.5px;
+
+  text-shadow:
+    0 0 6px rgba(249, 168, 212, 0.35);
+
   animation: latido 4s ease-in-out infinite;
 }
 
+/* Latido suave */
 @keyframes latido {
   0%, 100% {
-    text-shadow: 0 0 6px rgba(249, 168, 212, 0.4);
+    text-shadow:
+      0 0 6px rgba(249, 168, 212, 0.3);
   }
+
   50% {
-    text-shadow: 0 0 16px rgba(249, 168, 212, 0.9);
+    text-shadow:
+      0 0 12px rgba(249, 168, 212, 0.65);
   }
 }
+
+/* ================================
+   TEXTO
+================================ */
 
 .carta-texto {
   color: #fce7f3;
-  line-height: 1.75;
+
+  line-height: 1.8;
+
   white-space: pre-line;
+
   font-family: Georgia, 'Times New Roman', serif;
+
   font-size: 1.125rem;
+
   text-align: center;
+
+  letter-spacing: 0.15px;
+
+  text-shadow:
+    0 1px 8px rgba(249, 168, 212, 0.08);
 }
 
-/* Flecha */
+/* ================================
+   FLECHA
+================================ */
+
 .flecha-container {
   display: flex;
   justify-content: center;
@@ -101,11 +196,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 0.5rem;
+
   color: #f9a8d4;
+
   background: none;
+
   border: none;
+
   cursor: pointer;
+
   transition: all 0.3s;
 }
 
@@ -121,6 +222,7 @@
 .flecha-icon {
   width: 2rem;
   height: 2rem;
+
   animation: flotar 2.5s ease-in-out infinite;
 }
 
@@ -128,12 +230,16 @@
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(8px);
   }
 }
 
-/* Botones */
+/* ================================
+   BOTONES
+================================ */
+
 .botones-container {
   display: flex;
   gap: 1rem;
@@ -141,17 +247,28 @@
 
 .boton {
   flex: 1;
+
   font-weight: 600;
+
   padding: 1rem 1.5rem;
+
   border-radius: 0.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 0.75rem;
+
   transition: all 0.3s;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.3);
+
   border: none;
+
   cursor: pointer;
+
   color: white;
 }
 
@@ -159,20 +276,38 @@
   transform: scale(1.05);
 }
 
+/* Botón música */
 .boton-musica {
-  background: linear-gradient(to right, #db2777, #9333ea);
+  background: linear-gradient(
+    to right,
+    #db2777,
+    #9333ea
+  );
 }
 
 .boton-musica:hover {
-  background: linear-gradient(to right, #be185d, #7e22ce);
+  background: linear-gradient(
+    to right,
+    #be185d,
+    #7e22ce
+  );
 }
 
+/* Botón canción original */
 .boton-carta {
-  background: linear-gradient(to right, #9333ea, #4f46e5);
+  background: linear-gradient(
+    to right,
+    #9333ea,
+    #4f46e5
+  );
 }
 
 .boton-carta:hover {
-  background: linear-gradient(to right, #7e22ce, #4338ca);
+  background: linear-gradient(
+    to right,
+    #7e22ce,
+    #4338ca
+  );
 }
 
 .boton-icon {
@@ -180,56 +315,59 @@
   height: 1.25rem;
 }
 
-/* Indicador */
+/* ================================
+   INDICADOR DE PÁGINAS
+================================ */
+
 .indicador-paginas {
   display: flex;
   justify-content: center;
+
   gap: 0.5rem;
+
   margin-top: 1.5rem;
 }
 
 .indicador-punto {
   width: 0.75rem;
   height: 0.75rem;
+
   border-radius: 9999px;
-  background-color: rgba(244, 114, 182, 0.3);
+
+  background-color:
+    rgba(244, 114, 182, 0.3);
+
   border: none;
+
   cursor: pointer;
+
   transition: all 0.3s;
 }
 
 .indicador-punto.activo {
   width: 2rem;
+
   background-color: #f472b6;
+
+  box-shadow:
+    0 0 10px rgba(244, 114, 182, 0.45);
 }
 
-/* Responsive */
-@media (max-width: 640px) {
-  .carta-box {
-    padding: 1.5rem;
-  }
+/* ================================
+   TIEMPO DEL AUDIO
+================================ */
 
-  .carta-titulo {
-    font-size: 1.5rem;
-  }
-
-  .carta-texto {
-    font-size: 1rem;
-  }
-
-  .botones-container {
-    flex-direction: column;
-  }
-}
-
-/* Tiempo del audio */
 .tiempo-container {
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 0.5rem;
+
   margin-top: 1rem;
+
   color: #f9a8d4;
+
   font-size: 0.875rem;
 }
 
@@ -243,16 +381,25 @@
   font-weight: 500;
 }
 
-/* Modal de sincronización */
+/* ================================
+   MODAL DE SINCRONIZACIÓN
+================================ */
+
 .modal-overlay {
   position: fixed;
+
   inset: 0;
+
   background: rgba(0, 0, 0, 0.75);
+
   backdrop-filter: blur(6px);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   z-index: 1000;
+
   animation: aparecer-modal 0.3s ease-out;
 }
 
@@ -260,22 +407,37 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 .modal-contenido {
-  background: linear-gradient(145deg, #1a0a2e, #2d1057);
-  border: 1px solid rgba(180, 100, 255, 0.3);
+  background:
+    linear-gradient(
+      145deg,
+      #1a0a2e,
+      #2d1057
+    );
+
+  border: 1px solid
+    rgba(180, 100, 255, 0.3);
+
   border-radius: 20px;
+
   padding: 40px 36px;
+
   max-width: 420px;
+
   width: 90%;
+
   text-align: center;
+
   box-shadow:
     0 0 40px rgba(160, 60, 255, 0.25),
     0 25px 50px rgba(0, 0, 0, 0.6);
+
   animation: deslizar-modal 0.3s ease-out;
 }
 
@@ -283,6 +445,7 @@
   from {
     transform: translateY(-20px) scale(0.95);
   }
+
   to {
     transform: translateY(0) scale(1);
   }
@@ -290,51 +453,90 @@
 
 .modal-titulo {
   color: #e0aaff;
+
   font-size: 1.5rem;
+
   font-family: Georgia, 'Times New Roman', serif;
+
   font-weight: 700;
+
   margin-bottom: 16px;
+
   letter-spacing: 0.5px;
+
   text-align: center;
 }
 
 .modal-texto {
-  color: #e9d5ff;  
+  color: #e9d5ff;
+
   font-size: 0.95rem;
+
   line-height: 1.7;
-  margin-bottom: 20px;  
+
+  margin-bottom: 20px;
+
   text-align: center;
 }
 
 .modal-boton {
   width: 100%;
-  background: linear-gradient(135deg, #9b4dca, #c678f0);
+
+  background:
+    linear-gradient(
+      135deg,
+      #9b4dca,
+      #c678f0
+    );
+
   color: white;
+
   font-weight: 600;
+
   padding: 12px 48px;
+
   border-radius: 12px;
+
   border: none;
+
   cursor: pointer;
+
   font-size: 1rem;
+
   letter-spacing: 0.5px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  margin-top: 0px;  
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+
+  margin-top: 0;
 }
 
 .modal-boton:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(180, 100, 255, 0.4);
+
+  box-shadow:
+    0 4px 20px
+    rgba(180, 100, 255, 0.4);
 }
 
-/* Sincronización activa */
+/* ================================
+   SINCRONIZACIÓN ACTIVA
+================================ */
+
 .sincronizacion-activa {
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 0.5rem;
+
   margin-top: 1.5rem;
+
   color: #34d399;
+
   font-size: 0.875rem;
+
   animation: pulso 2s ease-in-out infinite;
 }
 
@@ -342,6 +544,7 @@
   0%, 100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.6;
   }
@@ -350,6 +553,7 @@
 .sincronizacion-icon {
   width: 1rem;
   height: 1rem;
+
   animation: rotar 2s linear infinite;
 }
 
@@ -357,48 +561,158 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-/* Botón de sincronización */
+/* ================================
+   BOTÓN DE SINCRONIZACIÓN
+================================ */
+
 .sincronizacion-container {
   display: flex;
+
   justify-content: center;
+
   margin-top: 1rem;
 }
 
 .boton-sincronizacion {
   display: flex;
   align-items: center;
+
   gap: 0.5rem;
+
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, #059669, #10b981);
+
+  background:
+    linear-gradient(
+      to right,
+      #059669,
+      #10b981
+    );
+
   color: white;
+
   font-weight: 600;
+
   border-radius: 0.5rem;
+
   border: none;
+
   cursor: pointer;
+
   transition: all 0.3s;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .boton-sincronizacion:hover {
-  background: linear-gradient(to right, #047857, #059669);
+  background:
+    linear-gradient(
+      to right,
+      #047857,
+      #059669
+    );
+
   transform: scale(1.05);
 }
 
 .boton-sincronizacion.activo {
-  background: linear-gradient(to right, #dc2626, #ef4444);
+  background:
+    linear-gradient(
+      to right,
+      #dc2626,
+      #ef4444
+    );
 }
 
 .boton-sincronizacion.activo:hover {
-  background: linear-gradient(to right, #b91c1c, #dc2626);
+  background:
+    linear-gradient(
+      to right,
+      #b91c1c,
+      #dc2626
+    );
+}
+/* ================================
+   PAUSAS EMOCIONALES
+================================ */
+
+.carta-texto.pausa-emocional {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(249, 168, 212, 0.75);
+
+  font-size: 2rem;
+
+  letter-spacing: 0.8rem;
+
+  text-shadow:
+    0 0 8px rgba(249, 168, 212, 0.25);
+
+  animation: pausa-respirar 4s ease-in-out infinite;
 }
 
-/* Deshabilitar indicadores en modo sincronización */
+@keyframes pausa-respirar {
+  0%, 100% {
+    opacity: 0.45;
+
+    text-shadow:
+      0 0 6px rgba(249, 168, 212, 0.2);
+
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+
+    text-shadow:
+      0 0 18px rgba(249, 168, 212, 0.65);
+
+    transform: scale(1.04);
+  }
+}
+/* ================================
+   INDICADORES DESHABILITADOS
+================================ */
+
 .indicador-punto:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 640px) {
+
+  .carta-container {
+    padding: 0.75rem;
+  }
+
+  .carta-box {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .carta-titulo {
+    font-size: 1.5rem;
+  }
+
+  .carta-texto {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .botones-container {
+    flex-direction: column;
+  }
 }
